@@ -7,10 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello from BridgeLabz';
-  imgUrl = 'assets/Bridgelabz logo.jpg'; // Image source
-
-  // Method to open BridgeLabz website in a new tab
-  openBridgeLabzSite() {
-    window.open('https://www.bridgelabz.com', '_blank');
-  }
+  imgUrl = 'assets/Bridgelabz logo.jpg';
+  userName: string = ''; // Two-way data binding variable
 }
