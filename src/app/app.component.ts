@@ -8,5 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hello from BridgeLabz';
   imgUrl = 'assets/Bridgelabz logo.jpg';
-  userName: string = ''; // Two-way data binding variable
+  userName: string = '';
+  
+  // Getter to validate name input
+  get isValidName(): boolean {
+    return /^[A-Z][a-zA-Z]{2,}$/.test(this.userName);
+  }
 }

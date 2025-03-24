@@ -1,3 +1,8 @@
 <!-- Input field for entering name -->
 <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
-<h2 *ngIf="userName">Hello from BridgeLabz, {{ userName }}</h2>
+<h2 *ngIf="isValidName">Hello from BridgeLabz, {{ userName }}</h2>
+
+<!-- Display error message if the name is invalid -->
+<p *ngIf="!isValidName && userName.length > 0" style="color: red;">
+  Invalid name! Must start with a capital letter and have at least 3 characters.
+</p>
